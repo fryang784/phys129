@@ -1,0 +1,50 @@
+Lisa in dataBase['NAME']
+Traceback (most recent call last):
+
+  File "<ipython-input-9-3cc7cc688ebc>", line 1, in <module>
+    Lisa in dataBase['NAME']
+
+NameError: name 'Lisa' is not defined
+
+
+
+
+'Lisa' in dataBase['NAME']
+Out[10]: False
+
+dataBase['NAME']
+Out[11]: 
+['Mary Lisa Anderson',
+ 'William Y Chen',
+ 'David George Davis',
+ 'Susan Garcia',
+ 'Elizabeth Helen Harris']
+
+'h' in a
+Out[12]: True
+
+exists = any(criteria in 'Lisa' for criteria in dataBase['NAME'])
+
+exists
+Out[14]: False
+
+exists = [0]*len(dataBase)
+
+exists
+Out[16]: [0, 0, 0, 0, 0, 0, 0]
+
+for i in range(len(exists)):
+    exists[i] = any(criteria in 'Lisa' for criteria in dataBase['NAME'][i])
+    
+Traceback (most recent call last):
+
+  File "<ipython-input-17-00fc2ae6000a>", line 2, in <module>
+    exists[i] = any(criteria in 'Lisa' for criteria in dataBase['NAME'][i])
+
+IndexError: list index out of range
+
+
+
+
+dataBase['NAME'][0]
+Out[18]: 'Mary Lisa Anderson'
